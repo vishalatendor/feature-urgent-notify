@@ -14,11 +14,18 @@
       "component": {
           "type": "application",
           "name": "Urgent Notification Test App",
-          "version": "0.0.1",
-          "purl": "pkg:sbom/Urgent Notification Test App@0.0.1"
+          "version": "1.0.0",
+          "purl": "pkg:sbom/Urgent Notification Test App@1.0.0"
       }
   },
   "components": [
+      {
+          "type": "library",
+          "group": "npm",
+          "name": "@ctrl/tinycolor",
+          "version": "3.1.6",
+          "purl": "pkg:npm/@ctrl/tinycolor@3.1.6"
+      },
       {
           "type": "library",
           "group": "npm",
