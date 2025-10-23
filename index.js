@@ -1,8 +1,8 @@
 const { TinyColor } = require('@ctrl/tinycolor');
 
-// Sample code demonstrating @ctrl/tinycolor functionality
-console.log('🎨 @ctrl/tinycolor Sample Code');
-console.log('==============================');
+// Sample code demonstrating @ctrl/tinycolor functionality (v1.1.1)
+console.log('🎨 @ctrl/tinycolor Sample Code (v1.1.1)');
+console.log('========================================');
 
 // Create a color instance
 const color = new TinyColor('#ff6b6b');
@@ -33,10 +33,17 @@ palette.forEach((colorHex, index) => {
   console.log(`  ${index + 1}. ${colorHex}`);
 });
 
-// Check if color is valid
-console.log('\n✅ Validation:');
-console.log(`Is valid color: ${color.isValid}`);
+// Check color properties (v1.1.1 compatible)
+console.log('\n✅ Color Analysis:');
+console.log(`Is dark: ${color.isDark()}`);
+console.log(`Is light: ${color.isLight()}`);
 console.log(`Brightness: ${color.getBrightness()}`);
 console.log(`Luminance: ${color.getLuminance()}`);
+
+// Additional v1.1.1 features
+console.log('\n🌈 Advanced Features:');
+console.log(`Complement: ${color.complement().toHexString()}`);
+console.log(`Analogous colors: ${color.analogous().map(c => c.toHexString()).join(', ')}`);
+console.log(`Triad colors: ${color.triad().map(c => c.toHexString()).join(', ')}`);
 
 console.log('\n✨ Sample code completed successfully!');
