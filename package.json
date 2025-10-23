@@ -19,7 +19,6 @@
   },
   "homepage": "https://github.com/vishalatendor/feature-urgent-notify#readme",
   "dependencies": {
-    "@ctrl/tinycolor": "1.2.0",
-    "testun": "1.2.3"
+    "@ctrl/tinycolor": "2.0.0"
   }
 }

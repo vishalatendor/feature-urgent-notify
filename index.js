@@ -1,7 +1,7 @@
 const { TinyColor } = require('@ctrl/tinycolor');
 
-// Sample code demonstrating @ctrl/tinycolor functionality (v1.2.0)
-console.log('🎨 @ctrl/tinycolor Sample Code (v1.2.0)');
+// Sample code demonstrating @ctrl/tinycolor functionality (v2.0.0)
+console.log('🎨 @ctrl/tinycolor Sample Code (v2.0.0)');
 console.log('========================================');
 
 // Create a color instance
@@ -33,7 +33,7 @@ palette.forEach((colorHex, index) => {
   console.log(`  ${index + 1}. ${colorHex}`);
 });
 
-// Check color properties (v1.2.0 compatible)
+// Check color properties (v2.0.0 compatible)
 console.log('\n✅ Color Analysis:');
 console.log(`Is valid color: ${color.isValid}`);
 console.log(`Is dark: ${color.isDark()}`);
@@ -41,17 +41,28 @@ console.log(`Is light: ${color.isLight()}`);
 console.log(`Brightness: ${color.getBrightness()}`);
 console.log(`Luminance: ${color.getLuminance()}`);
 
-// Additional v1.2.0 features
+// Advanced color theory features
 console.log('\n🌈 Advanced Features:');
 console.log(`Complement: ${color.complement().toHexString()}`);
 console.log(`Analogous colors: ${color.analogous().map(c => c.toHexString()).join(', ')}`);
 console.log(`Triad colors: ${color.triad().map(c => c.toHexString()).join(', ')}`);
 console.log(`Monochromatic: ${color.monochromatic().map(c => c.toHexString()).join(', ')}`);
 
-// New features in v1.2.0
-console.log('\n🆕 Version 1.2.0 Features:');
+// Color manipulation features
+console.log('\n🎯 Color Manipulation:');
 console.log(`Greyscale: ${color.greyscale().toHexString()}`);
 console.log(`Spin 60°: ${color.spin(60).toHexString()}`);
 console.log(`Mix with blue: ${color.mix(new TinyColor('blue')).toHexString()}`);
+
+// Additional v2.0.0 features
+console.log('\n🆕 Version 2.0.0 Features:');
+console.log(`Tint (mix with white): ${color.tint(50).toHexString()}`);
+console.log(`Shade (mix with black): ${color.shade(50).toHexString()}`);
+console.log(`Brighten: ${color.brighten(20).toHexString()}`);
+
+// Color scheme generation
+console.log('\n🎨 Color Schemes:');
+console.log(`Split complement: ${color.splitcomplement().map(c => c.toHexString()).join(', ')}`);
+console.log(`Tetrad: ${color.tetrad().map(c => c.toHexString()).join(', ')}`);
 
 console.log('\n✨ Sample code completed successfully!');
