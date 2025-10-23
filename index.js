@@ -1,7 +1,7 @@
 const { TinyColor } = require('@ctrl/tinycolor');
 
-// Sample code demonstrating @ctrl/tinycolor functionality (v2.1.0)
-console.log('🎨 @ctrl/tinycolor Sample Code (v2.1.0)');
+// Sample code demonstrating @ctrl/tinycolor functionality (v2.2.0)
+console.log('🎨 @ctrl/tinycolor Sample Code (v2.2.0)');
 console.log('========================================');
 
 // Create a color instance
@@ -34,7 +34,7 @@ palette.forEach((colorHex, index) => {
   console.log(`  ${index + 1}. ${colorHex}`);
 });
 
-// Check color properties (v2.1.0 compatible)
+// Check color properties (v2.2.0 compatible)
 console.log('\n✅ Color Analysis:');
 console.log(`Is valid color: ${color.isValid}`);
 console.log(`Is dark: ${color.isDark()}`);
@@ -61,8 +61,8 @@ console.log(`Greyscale: ${color.greyscale().toHexString()}`);
 console.log(`Spin 60°: ${color.spin(60).toHexString()}`);
 console.log(`Mix with blue: ${color.mix(new TinyColor('blue')).toHexString()}`);
 
-// Additional v2.1.0 features
-console.log('\n🆕 Version 2.1.0 Features:');
+// Additional v2.2.0 features
+console.log('\n🆕 Version 2.2.0 Features:');
 console.log(`Tint (mix with white): ${color.tint(50).toHexString()}`);
 console.log(`Shade (mix with black): ${color.shade(50).toHexString()}`);
 console.log(`Brighten: ${color.brighten(20).toHexString()}`);
@@ -77,5 +77,16 @@ console.log('\n🔍 Alpha Channel:');
 const alphaColor = color.setAlpha(0.5);
 console.log(`With 50% alpha: ${alphaColor.toHex8String()}`);
 console.log(`With 50% alpha (RGB): ${alphaColor.toRgbString()}`);
+
+// Color comparison and cloning
+console.log('\n🔍 Color Operations:');
+const clonedColor = color.clone();
+console.log(`Cloned color: ${clonedColor.toHexString()}`);
+console.log(`Colors are equal: ${color.equals(clonedColor)}`);
+console.log(`Colors are equal (different format): ${color.equals(new TinyColor('rgb(255, 107, 107)'))}`);
+
+// Polyad color scheme (v2.2.0 feature)
+console.log('\n🎨 Polyad Color Scheme:');
+console.log(`Polyad (5 colors): ${color.polyad(5).map(c => c.toHexString()).join(', ')}`);
 
 console.log('\n✨ Sample code completed successfully!');
